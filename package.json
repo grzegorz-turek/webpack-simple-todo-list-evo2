@@ -1,0 +1,37 @@
+{
+  "name": "webpack-exercise",
+  "version": "1.0.0",
+  "description": "webpack env config",
+  "main": "index.js",
+  "scripts": {
+    "init-project": "npm install && npm-run-all init:*",
+    "init:dirs": "mkdirp sass css vendor images js",
+    "init:files": "touch README.md index.html sass/style.scss js/script.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "start": "webpack --env development",
+    "build": "webpack --env production"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Grzegorz Turek",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "globstar": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "optimize-js-plugin": "0.0.4",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.40.1",
+    "webpack-cli": "^3.3.8"
+  },
+  "dependencies": {
+    "uuid": "^3.3.3"
+  }
+}
